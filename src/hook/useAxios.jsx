@@ -1,4 +1,4 @@
 import axios from "axios";
-import {URL} from "./useEnv"
+import { URL } from "./useEnv"
 
-export const useAxios = () => axios.create({baseURL:URL,headers:{"Authorization":`Bearer`}})
+export const useAxios = () => axios.create({ baseURL: URL})
