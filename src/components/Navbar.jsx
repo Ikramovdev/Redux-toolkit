@@ -1,7 +1,9 @@
 import { Button, Input } from 'antd'
+import { useSelector } from "react-redux"
 import React from 'react'
 
 const Navbar = () => {
+  const LikedProducts = useSelector(state => state)
   return (
     <nav className='p-5 bg-blue-400 flex items-center justify-between'>
         <h1 className='font-bold font-montserrat text-[30px] text-white'>Products</h1>

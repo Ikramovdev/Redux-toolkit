@@ -9,7 +9,6 @@ const List = () => {
       setProducts(res.data.products);
     })
   }, [])
-  console.log(products);
   return (
     <div className='p-5 flex items-center justify-between gap-5 flex-wrap'>
       {products?.map(item => <ProductsCard key={item.id} item={item}/>)}
