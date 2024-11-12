@@ -2,9 +2,10 @@ import React, { useEffect } from 'react'
 import ProductsCard from "./ProductsCard"
 import { useDispatch } from 'react-redux'
 import { savedLikedProducts } from "../store/likedSlice"
+import { useAxios } from "../hook/useAxios"
 
 
-const List = (products,setProducts,refresh) => {
+const List = ({products, setProducts, refresh}) => {
   const dispatch = useDispatch({ products, setProducts, refresh })
   useEffect(() => {
     useAxios().get(`https://dummyjson.com/products`).then(res => {
